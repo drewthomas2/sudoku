@@ -12,31 +12,21 @@
 using namespace std;
 
 int main(int argc, const char * argv[]) {
-    vector<vector<vector<int>>> grid;
-    /*
-    vector<int> myvector;
-    int myint;
-    cout << "enter a number" << endl;
-    cin >> myint;
-    myvector.push_back(myint);
-    cout << myvector [0] << endl << endl << endl;
-    */
-    /*
-    sollist.push_back(vector<vector<int>>());
-    sollist[0].push_back(vector<int>());
-    sollist[0][0].push_back(value);
-    */
-    for (int i = 0; i <= 9 ; i++) {
-        grid.push_back(vector<vector<int>>());
-        grid[0].push_back(vector<int>());
-        grid[0][0].push_back(1);
-        
-//        for (int j = 0; j <= 9; j++) {
-//            for (int k = 0; k <= 9; k++){
-//                grid[i][j][k];
-//            }
-//        }
+    
+    vector < vector < vector<int> > > tube;
+    for(int i=0;i<10;i++)
+    {
+        tube.push_back(vector<vector<int> >());
+        for(int j=0;j<10;j++)
+        {
+            tube[i].push_back(vector<int>());
+            for(int k=0;k<1;k++)
+            {
+                tube[i][j].push_back(k);
+                //cout << "[" << i << ", " << j << ", " << tube[i][j][k] << "]";
+            }
+        }
     }
-    cout << grid[0][0][0];
+    cout << tube[0][0][0];
     return 0;
 }
