@@ -12,16 +12,28 @@
 #include <vector>
 using namespace std;
 
-int x = 2;
-int y = 2;
+int x = 8;
+int y = 8;
 int real = x + 1;
 int total = ((x + 1) * (x + 2))/2;
 int line1total = total;
 int line2total = total;
 int line3total = total;
+int line4total = total;
+int line5total = total;
+int line6total = total;
+int line7total = total;
+int line8total = total;
+int line9total = total;
 int column1total = total;
 int column2total = total;
 int column3total = total;
+int column4total = total;
+int column5total = total;
+int column6total = total;
+int column7total = total;
+int column8total = total;
+int column9total = total;
 vector < vector < vector<int> > > tube;
 
 void func(int lineTotal){
@@ -77,9 +89,11 @@ int main(int argc, const char * argv[]) {
     }
     for(int i=0;i<=y;i++){
         for(int j=0;j<=x;j++){
-            cout << "|" << tube[i][j][0];
+            cout << " | " << tube[i][j][0];
         }
         cout << "|" << endl;
+		while()
+			cout << "--"
     }
 	func(3);
 
