@@ -58,30 +58,26 @@ void func(int lineTotal){
 }
 
 int main(int argc, const char * argv[]) {
-    vector < vector < vector<int> > > tube;
+    vector<vector<int>> tube;
     for(int i=0;i<=y;i++)
     {
-        tube.push_back(vector<vector<int> >());
+        tube.push_back(vector<int>());
         for(int j=0;j<=x;j++)
         {
-            tube[i].push_back(vector<int>());
-            for(int k=0;k<1;k++)
-            {
-                int a;
-				cout << "[" << i << ", " << j << ", ";
-                cin >> a;
-                tube[i][j].push_back(a);
-				cout << "[" << i << ", " << j << ", " << tube[i][j][k] << "]" << endl;
-            }
+			int a;
+			cout << "enter a shit ton of numbers" << endl;
+			cin >> a;
+			tube[i][j].push_back(a);
+			cout << "[" << i << ", " << j << ", " << tube[i][j] << "]" << endl;
+
         }
     }
     for(int i=0;i<=y;i++){
         for(int j=0;j<=x;j++){
-            cout << "|" << tube[i][j][0];
+            cout << "|" << tube[i][j];
         }
         cout << "|" << endl;
     }
-	func(3);
 
 	
     return 0;
