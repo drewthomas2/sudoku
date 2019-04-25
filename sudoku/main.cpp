@@ -11,8 +11,8 @@
 #include <vector>
 using namespace std;
 
-int x = 8;
-int y = 8;
+int x = 3;
+int y = 3;
 vector < vector < vector<int> > > tube;
 
 int main(int argc, const char * argv[]) {
@@ -23,7 +23,7 @@ int main(int argc, const char * argv[]) {
 		for(int j=0;j<=x;j++)
 		{
 			int a;
-			cout << "enter a shit ton of numbers" << endl;
+			cout << "enter a ton of numbers" << endl;
 			cin >> a;
 			tube[i][j] = a;
 			cout << "[" << i << ", " << j << ", " << tube[i][j] << "]" << endl;
@@ -33,9 +33,9 @@ int main(int argc, const char * argv[]) {
 	for(int i=0;i<=y;i++){
 		for(int j=0;j<=x;j++){
 			cout << i << " : " << j << " > " << tube[i][j] << endl;
-			cout << "|" << tube[i][j];
+			//cout << "|" << tube[i][j];
 		}
-		cout << "|" << endl;
+		//cout << "|" << endl;
 	}
 	return 0;
 }
