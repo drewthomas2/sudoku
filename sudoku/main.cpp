@@ -16,24 +16,21 @@ using namespace std;
 
 bool SolveSudoku(vector<vector<int>> grid);
 
-bool UsedInRow(vector<vector<int>> grid, int row, int num)
-{
+bool UsedInRow(vector<vector<int>> grid, int row, int num){
 	for (int col = 0; col < N; col++)
 		if (grid[row][col] == num)
 			return true;
 	return false;
 }
 
-bool UsedInCol(vector<vector<int>> grid, int col, int num)
-{
+bool UsedInCol(vector<vector<int>> grid, int col, int num){
 	for (int row = 0; row < N; row++)
 		if (grid[row][col] == num)
 			return true;
 	return false;
 }
 
-bool UsedInBox(vector<vector<int>> grid, int boxStartRow, int boxStartCol, int num)
-{
+bool UsedInBox(vector<vector<int>> grid, int boxStartRow, int boxStartCol, int num){
 	for (int row = 0; row < 3; row++)
 		for (int col = 0; col < 3; col++)
 			if (grid[row+boxStartRow][col+boxStartCol] == num)
@@ -41,8 +38,7 @@ bool UsedInBox(vector<vector<int>> grid, int boxStartRow, int boxStartCol, int n
 	return false;
 }
 
-bool FindUnassignedLocation(vector<vector<int>> grid, int &row, int &col)
-{
+bool FindUnassignedLocation(vector<vector<int>> grid, int &row, int &col){
 	for (row = 0; row < N; row++)
 		for (col = 0; col < N; col++)
 			if (grid[row][col] == UNASSIGNED)
@@ -50,13 +46,11 @@ bool FindUnassignedLocation(vector<vector<int>> grid, int &row, int &col)
 	return false;
 }
 
-bool isSafe(vector<vector<int>> grid, int row, int col, int num)
-{
-	return !UsedInRow(grid, row, num) && !UsedInCol(grid, col, num) && !UsedInBox(grid, row - row%3 , col - col%3, num)&& grid[row][col]==UNASSIGNED;
+bool isSafe(vector<vector<int>> grid, int row, int col, int num){
+	return !UsedInRow(grid, row, num) && !UsedInCol(grid, col, num) && !UsedInBox(grid, row-row%3 , col-col%3, num)&& grid[row][col]==UNASSIGNED;
 }
 
-bool SolveSudoku(vector<vector<int>> grid)
-{
+bool SolveSudoku(vector<vector<int>> grid){
 	int row, col;
 	if (!FindUnassignedLocation(grid, row, col)){
 		return true;
@@ -74,8 +68,7 @@ bool SolveSudoku(vector<vector<int>> grid)
 	return false;
 }
 
-void printGrid(vector<vector<int>> grid)
-{
+void printGrid(vector<vector<int>> grid){
 	for (int row = 0; row < N; row++)
 	{
 		for (int col = 0; col < N; col++)
@@ -85,8 +78,7 @@ void printGrid(vector<vector<int>> grid)
 }
 
 
-int main()
-{
+int main(){
 
 //    int grid[N][N] = {
 //        {3, 0, 6, 5, 0, 8, 4, 0, 0},
@@ -100,14 +92,23 @@ int main()
 //        {0, 0, 5, 2, 0, 6, 3, 0, 0}};
 	
 	vector<vector<int>> tube;
-	cout << "enter a lot of numbers" << endl;
-	for(int i=0;i<N;i++){
-		tube.push_back(vector<int>(7));
-		int a;
-		cin >> a;
-		tube.push_back(a)
+
+	for(int i=0; i<N; i++){
+		tube.push_back(vector<int>(9));
+		for(int j=0; j<N; j++){
+			int a;
+			cout << "enter a lot of numbers" << endl;
+			cin >> a;
+			tube[i][j] = a;
+			cout << "[" << i << ", " << j << ", " << tube[i][j] << "]" << endl;
+		}
 	}
-	
+	for(int i=0; i<N; i++){
+		for(int j=0; i<N; i++){
+			cout << tube[i][j];
+		}
+	}
+
 	if (SolveSudoku(tube) == true){
 		cout << "epic victory royale"<< endl;
 	}
