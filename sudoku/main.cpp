@@ -103,11 +103,6 @@ int main(){
 			cout << "[" << i << ", " << j << ", " << tube[i][j] << "]" << endl;
 		}
 	}
-	for(int i=0; i<N; i++){
-		for(int j=0; i<N; i++){
-			cout << tube[i][j];
-		}
-	}
 
 	if (SolveSudoku(tube) == true){
 		cout << "epic victory royale"<< endl;
