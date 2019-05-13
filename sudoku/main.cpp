@@ -88,7 +88,7 @@ void printGrid(vector<vector<int>> grid)
 int main()
 {
 
-//    int grid[N][N] = {
+//        int grid[N][N] = {
 //        {3, 0, 6, 5, 0, 8, 4, 0, 0},
 //        {5, 2, 0, 0, 0, 0, 0, 0, 0},
 //        {0, 8, 7, 0, 0, 0, 0, 3, 1},
@@ -100,12 +100,17 @@ int main()
 //        {0, 0, 5, 2, 0, 6, 3, 0, 0}};
 	
 	vector<vector<int>> tube;
-	cout << "enter a lot of numbers" << endl;
-	for(int i=0;i<N;i++){
+	for(int i=0;i<N;i++)
+	{
 		tube.push_back(vector<int>(7));
-		int a;
-		cin >> a;
-		tube.push_back(a)
+		for(int j=0;j<N;j++)
+		{
+			int a;
+			cout << "enter a couple of numbers" << endl;
+			cin >> a;
+			tube[i][j] = a;
+			cout << "[" << i << ", " << j << ", " << tube[i][j] << "]" << endl;
+		}
 	}
 	
 	if (SolveSudoku(tube) == true){
