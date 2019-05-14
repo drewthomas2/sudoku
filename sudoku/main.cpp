@@ -109,7 +109,7 @@ int main()
 			cout << "enter a couple of numbers" << endl;
 			cin >> a;
 			cin.getline();
-			
+			cout << "xcode is a piece of fucking trash bitch ass head ass "
 			tube[i][j] = a;
 			cout << "[" << i << ", " << j << ", " << tube[i][j] << "]" << endl;
 		}
