@@ -108,6 +108,8 @@ int main()
 			int a;
 			cout << "enter a couple of numbers" << endl;
 			cin >> a;
+			cin.getline();
+			
 			tube[i][j] = a;
 			cout << "[" << i << ", " << j << ", " << tube[i][j] << "]" << endl;
 		}
