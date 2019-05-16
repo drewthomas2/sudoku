@@ -83,41 +83,41 @@ void printGrid(int grid[N][N]){
 			cout << "|" << grid[row][col];
 		}
 		cout << "| ";
-		for (int col = 0; col < 3; col++){
+		for (int col = 3; col < 6; col++){
 			cout << "|" << grid[row][col];
 		}
 		cout << "| ";
-		for (int col = 0; col < 3; col++){
+		for (int col = 6; col < 9; col++){
 			cout << "|" << grid[row][col];
 		}
 		cout << "|" << endl;
 	}
 	cout << endl;
-	for (int row = 0; row < 3; row++){
+	for (int row = 3; row < 6; row++){
 		for (int col = 0; col < 3; col++){
 			cout << "|" << grid[row][col];
 		}
 		cout << "| ";
-		for (int col = 0; col < 3; col++){
+		for (int col = 3; col < 6; col++){
 			cout << "|" << grid[row][col];
 		}
 		cout << "| ";
-		for (int col = 0; col < 3; col++){
+		for (int col = 6; col < 9; col++){
 			cout << "|" << grid[row][col];
 		}
 		cout << "|" << endl;
 	}
 	cout << endl;
-	for (int row = 0; row < 3; row++){
+	for (int row = 6; row < 9; row++){
 		for (int col = 0; col < 3; col++){
 			cout << "|" << grid[row][col];
 		}
 		cout << "| ";
-		for (int col = 0; col < 3; col++){
+		for (int col = 3; col < 6; col++){
 			cout << "|" << grid[row][col];
 		}
 		cout << "| ";
-		for (int col = 0; col < 3; col++){
+		for (int col = 6; col < 9; col++){
 			cout << "|" << grid[row][col];
 		}
 		cout << "|" << endl;
@@ -129,14 +129,14 @@ int main(){
 		{0, 0, 0,   0, 0, 0,   0, 0, 0},
 		{0, 0, 0,   0, 0, 0,   0, 0, 0},
 		
-		{0, 0, 0,   0, 0, 0,   0, 0, 0},
+		{0, 3, 0,   0, 0, 0,   0, 0, 0},
 		{0, 0, 0,   0, 0, 0,   0, 0, 0},
 		{0, 0, 0,   0, 0, 0,   0, 0, 0},
 		
 		{0, 0, 0,   0, 0, 0,   0, 0, 0},
 		{0, 0, 0,   0, 0, 0,   0, 0, 0},
 		{0, 0, 0,   0, 0, 0,   0, 0, 0},};
-	//    printGrid(grid);
+//	    printGrid(grid);
 	cout << "enter a couple of numbers" << endl;
 	for(int i=0;i<N;i++){
 		for(int j=0;j<N;j++){
