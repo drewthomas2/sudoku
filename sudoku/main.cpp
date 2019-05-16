@@ -151,8 +151,8 @@ int main(){
 		cout << "it works" << endl;
 	}else{
 		cout << "No solution exists";
-		return 0;
 	}
+	return 0;
 }
 /*    int grid[N][N] = {{0, 0, 0,   0, 0, 0,   0, 0, 0},
  {0, 0, 0,   0, 0, 0,   0, 0, 0},
