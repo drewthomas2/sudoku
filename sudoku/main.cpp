@@ -129,23 +129,24 @@ int main(){
 		{0, 0, 0,   0, 0, 0,   0, 0, 0},
 		{0, 0, 0,   0, 0, 0,   0, 0, 0},
 		
-		{0, 3, 0,   0, 0, 0,   0, 0, 0},
+		{0, 0, 0,   0, 0, 0,   0, 0, 0},
 		{0, 0, 0,   0, 0, 0,   0, 0, 0},
 		{0, 0, 0,   0, 0, 0,   0, 0, 0},
 		
 		{0, 0, 0,   0, 0, 0,   0, 0, 0},
 		{0, 0, 0,   0, 0, 0,   0, 0, 0},
 		{0, 0, 0,   0, 0, 0,   0, 0, 0},};
-//	    printGrid(grid);
+
 	cout << "enter a couple of numbers" << endl;
 	for(int i=0;i<N;i++){
 		for(int j=0;j<N;j++){
-			int a;
+			int array[9];
 			cout << "[" << (i+1) << ", " << (j+1) << "] = ";
-			cin >> a;
-			grid[i][j] = a;
+			cin >> grid[i][j];
 		}
 	}
+//	printGrid(grid);
+	
 	if (SolveSudoku(grid) == true){
 		printGrid(grid);
 		cout << "it works" << endl;
